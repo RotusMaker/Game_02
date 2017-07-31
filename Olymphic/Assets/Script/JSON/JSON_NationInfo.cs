@@ -43,4 +43,14 @@ public class JSON_NationInfo : Singleton<JSON_NationInfo>
 			}
 		}
 	}
+
+	// 현재 데이터상 나라 숫자
+	public int GetNationCount()
+	{
+		if (m_dicNationData != null) 
+		{
+			return m_dicNationData.Count;
+		}
+		return -1;
+	}
 }
