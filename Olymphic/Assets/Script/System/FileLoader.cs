@@ -15,4 +15,11 @@ public class FileLoader : Singleton<FileLoader>
 		Debug.Log(bindata.text);
 		return bindata.text;
 	}
+
+	public GameObject LoadPrefab(string fileName)
+	{
+		string path = string.Format("Prefabs/{0}",fileName);
+		GameObject obj = Resources.Load (path) as GameObject;
+		return GameObject.Instantiate(obj);
+	}
 }

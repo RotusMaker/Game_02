@@ -40,13 +40,18 @@ public class Logo_Nation_ScrollView : MonoBehaviour {
 		for (int i = 0; i < obj.transform.childCount; i++) 
 		{
 			Transform child = obj.transform.GetChild (i);
-			// 국가 이름
 			if (child.name.CompareTo ("name") == 0) 
 			{
+				// 국가 이름
 				child.GetComponent<Text> ().text = data.nationName;
 			}
-			// 국기
-			// 최고 종목
+			else if (child.name.CompareTo ("button") == 0) 
+			{
+				// 버튼
+				child.GetComponent<Button> ().onClick.AddListener (()=>{
+					SelectLevel01Scene.instance.OnClickedNation (data);
+				});
+			}
 		}
 	}
 }
