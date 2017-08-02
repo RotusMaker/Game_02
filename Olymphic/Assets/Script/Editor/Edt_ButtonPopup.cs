@@ -9,6 +9,7 @@ public class Edt_ButtonPopup : Editor
 {
 	private ReorderableList listBtn;
 	private ReorderableList listTxt;
+	private ReorderableList listObj;
 
 	public void OnEnable() 
 	{
@@ -33,6 +34,17 @@ public class Edt_ButtonPopup : Editor
 		listTxt.drawHeaderCallback = (Rect rect) => {
 			EditorGUI.LabelField(rect, "Resources");
 		};
+
+		listObj = new ReorderableList(serializedObject, serializedObject.FindProperty("m_listCustom"), true, true, true, true);
+		listObj.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) => {
+			SerializedProperty element = listObj.serializedProperty.GetArrayElementAtIndex(index);
+			rect.y += 2;
+			EditorGUI.PropertyField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("type"), GUIContent.none);
+			EditorGUI.PropertyField(new Rect(rect.x + 70, rect.y, 160, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
+		};
+		listObj.drawHeaderCallback = (Rect rect) => {
+			EditorGUI.LabelField(rect, "Resources");
+		};
 	}
 
 	public override void OnInspectorGUI() 
@@ -40,6 +52,7 @@ public class Edt_ButtonPopup : Editor
 		serializedObject.Update();
 		listBtn.DoLayoutList();
 		listTxt.DoLayoutList();
+		listObj.DoLayoutList();
 		serializedObject.ApplyModifiedProperties();
 	}
 }

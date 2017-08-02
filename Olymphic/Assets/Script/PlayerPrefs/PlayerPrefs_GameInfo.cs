@@ -70,4 +70,22 @@ public class PlayerPrefs_GameInfo : Singleton<PlayerPrefs_GameInfo>
 		}
 		Debug.Log (strDebug);
 	}
+
+	public int GetRankFromNationcode(int code)
+	{
+		if (m_dicMissionRanking.ContainsKey (code)) {
+			return m_dicMissionRanking [code];
+		}
+		return -1;
+	}
+
+	public int GetMissionNationCount()
+	{
+		return m_dicMissionRanking.Count;
+	}
+
+	public bool IsMissionNation(int code)
+	{
+		return m_dicMissionRanking.ContainsKey(code);
+	}
 }

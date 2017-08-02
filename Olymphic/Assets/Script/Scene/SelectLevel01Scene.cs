@@ -23,6 +23,7 @@ public class SelectLevel01Scene : MonoSingleton<SelectLevel01Scene>
 	private int m_nLikeNation = 0;
 	private int m_nHateNation = 0;
 	private GameObject m_objSelectPopup = null;
+	private GameObject m_objMissionInfoPopup = null;
 
 	#region UnityFunc
 	void Start()
@@ -46,7 +47,27 @@ public class SelectLevel01Scene : MonoSingleton<SelectLevel01Scene>
 				m_txtOrder.text = "얄미운 국가를 고르시오.";
 				break;
 			case eState.eMissionOpen:
-				m_txtOrder.text = "당신의 편파판정으로 게임에 개입하여 다음 순위를 만드시오.";
+				PlayerPrefs_GameInfo.Instance.CreateMission (m_nLikeNation, m_nHateNation);
+				//m_txtOrder.text = "당신의 편파판정으로 게임에 개입하여 다음 순위를 만드시오.";
+				if (m_objMissionInfoPopup == null) {
+					m_objMissionInfoPopup = FileLoader.Instance.LoadPrefab ("UI/mission_ntf_popup");
+					m_objMissionInfoPopup.transform.parent = m_canvas.transform;
+					m_objMissionInfoPopup.GetComponent<RectTransform> ().offsetMax = Vector2.zero;
+					m_objMissionInfoPopup.GetComponent<RectTransform> ().offsetMin = Vector2.zero;
+					m_objMissionInfoPopup.GetComponent<RectTransform> ().sizeDelta = Vector2.zero;
+				}
+				m_objMissionInfoPopup.SetActive (true);
+
+				ButtonPopup popup = m_objMissionInfoPopup.GetComponent<ButtonPopup> ();
+				popup.CreateDictionary ();
+				Nation_ScrollView_Popup scroll = popup.GetObj (ButtonPopup.eCustomObject.NationMission).GetComponent<Nation_ScrollView_Popup> ();
+				scroll.InitData ();
+				popup.GetText (ButtonPopup.eTextType.Title).text = string.Format("편파판정으로 다음 [{0}]개 국가 순위를 만드시오.",PlayerPrefs_GameInfo.Instance.GetMissionNationCount());
+				popup.GetButton (ButtonPopup.eButtonType.OK).onClick.RemoveAllListeners ();
+				popup.GetButton (ButtonPopup.eButtonType.OK).onClick.AddListener (()=>{
+					m_objMissionInfoPopup.SetActive(false);
+					// 씬 이동 넣기~
+				});
 				break;
 			}
 		}

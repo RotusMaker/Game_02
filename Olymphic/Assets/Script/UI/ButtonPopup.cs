@@ -17,6 +17,11 @@ public class ButtonPopup : MonoBehaviour
 		Title,
 		Content_1,
 	}
+
+	public enum eCustomObject
+	{
+		NationMission,
+	}
 	
 	[System.Serializable]
 	public class ButtonInfo
@@ -31,12 +36,21 @@ public class ButtonPopup : MonoBehaviour
 		public eTextType type;
 		public Text text;
 	}
+
+	[System.Serializable]
+	public class CustomObject
+	{
+		public eCustomObject type;
+		public GameObject obj;
+	}
 	
 	public Image m_imgBg;
 	public List<ButtonInfo> m_listBtn;
 	public List<TextInfo> m_listText;
+	public List<CustomObject> m_listCustom;
 	public Dictionary<eButtonType,Button> m_dicBtn = null;
 	public Dictionary<eTextType,Text> m_dicTxt = null;
+	public Dictionary<eCustomObject,GameObject> m_dicObj = null;
 
 	public void CreateDictionary()
 	{
@@ -54,6 +68,13 @@ public class ButtonPopup : MonoBehaviour
 				m_dicTxt.Add (m_listText [i].type, m_listText [i].text);
 			}
 		}
+		if (m_dicObj == null) {
+			m_dicObj = new Dictionary<eCustomObject, GameObject> ();
+
+			for (int i = 0; i < m_listCustom.Count; i++) {
+				m_dicObj.Add (m_listCustom [i].type, m_listCustom [i].obj);
+			}
+		}
 	}
 
 	public Button GetButton(eButtonType type)
@@ -68,6 +89,14 @@ public class ButtonPopup : MonoBehaviour
 	{
 		if (m_dicTxt != null && m_dicTxt.ContainsKey(type)) {
 			return m_dicTxt [type];
+		}
+		return null;
+	}
+
+	public GameObject GetObj(eCustomObject type)
+	{
+		if (m_dicObj != null && m_dicObj.ContainsKey(type)) {
+			return m_dicObj [type];
 		}
 		return null;
 	}
