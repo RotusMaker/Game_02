@@ -1,4 +1,57 @@
 
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx
+Parse sheet: Sheet1
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx
+------------------------------------------------------------------------------
+[AIChatData.xlsx(Sheet1): ROW 1]
+Found object mark: '#ai_chat_data[{}]'
+[AIChatData.xlsx(Sheet1): ROW 1]
+ Key: code at 1
+[AIChatData.xlsx(Sheet1): ROW 1]
+ Key: nation_code at 2
+[AIChatData.xlsx(Sheet1): ROW 1]
+ Key: emotion_level at 3
+[AIChatData.xlsx(Sheet1): ROW 1]
+ Key: text at 4
+Parsing Array Object Table...
+
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx
+Parse sheet: Sheet1
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx
+------------------------------------------------------------------------------
+[EventInfo.xlsx(Sheet1): ROW 1]
+Found object mark: '#event_data[{}]'
+[EventInfo.xlsx(Sheet1): ROW 1]
+ Key: code at 1
+[EventInfo.xlsx(Sheet1): ROW 1]
+ Key: name at 2
+[EventInfo.xlsx(Sheet1): ROW 1]
+ Key: sprite at 3
+Parsing Array Object Table...
+
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx
+Parse sheet: Sheet1
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx
+------------------------------------------------------------------------------
+[GameInfo.xlsx(Sheet1): ROW 1]
+Found object mark: '#game_data[{}]'
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: code at 1
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: name at 2
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: sprite at 3
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: open_date at 4
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: open_time at 5
+[GameInfo.xlsx(Sheet1): ROW 1]
+ Key: event_code at 6
+Parsing Array Object Table...
+
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\NationInfo.xlsx
 Parse sheet: Sheet1
 Parsing: C:\Olymphic\trunk\Tools\excel2json-master\NationInfo.xlsx.$$$\Sheet1.csv
