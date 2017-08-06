@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3e6f4e2c392e86945ade77b7f2f8450e
+timeCreated: 1502033701
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dotspitch
+  fontNames:
+  - Dotspitch
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
