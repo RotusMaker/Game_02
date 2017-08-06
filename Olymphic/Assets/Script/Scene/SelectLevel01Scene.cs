@@ -52,6 +52,7 @@ public class SelectLevel01Scene : MonoSingleton<SelectLevel01Scene>
 				if (m_objMissionInfoPopup == null) {
 					m_objMissionInfoPopup = FileLoader.Instance.LoadPrefab ("UI/mission_ntf_popup");
 					m_objMissionInfoPopup.transform.parent = m_canvas.transform;
+					m_objMissionInfoPopup.transform.localScale = Vector3.one;
 					m_objMissionInfoPopup.GetComponent<RectTransform> ().offsetMax = Vector2.zero;
 					m_objMissionInfoPopup.GetComponent<RectTransform> ().offsetMin = Vector2.zero;
 					m_objMissionInfoPopup.GetComponent<RectTransform> ().sizeDelta = Vector2.zero;
@@ -84,6 +85,7 @@ public class SelectLevel01Scene : MonoSingleton<SelectLevel01Scene>
 			if (m_objSelectPopup == null) {
 				m_objSelectPopup = FileLoader.Instance.LoadPrefab ("UI/two_btn_popup");
 				m_objSelectPopup.transform.parent = m_canvas.transform;
+				m_objSelectPopup.transform.localScale = Vector3.one;
 				m_objSelectPopup.GetComponent<RectTransform> ().offsetMax = Vector2.zero;
 				m_objSelectPopup.GetComponent<RectTransform> ().offsetMin = Vector2.zero;
 				m_objSelectPopup.GetComponent<RectTransform> ().sizeDelta = Vector2.zero;
@@ -109,6 +111,7 @@ public class SelectLevel01Scene : MonoSingleton<SelectLevel01Scene>
 			if (m_objSelectPopup == null) {
 				m_objSelectPopup = FileLoader.Instance.LoadPrefab ("UI/two_btn_popup");
 				m_objSelectPopup.transform.parent = m_canvas.transform;
+				m_objSelectPopup.transform.localScale = Vector3.one;
 				m_objSelectPopup.GetComponent<RectTransform> ().offsetMax = Vector2.zero;
 				m_objSelectPopup.GetComponent<RectTransform> ().offsetMin = Vector2.zero;
 				m_objSelectPopup.GetComponent<RectTransform> ().sizeDelta = Vector2.zero;

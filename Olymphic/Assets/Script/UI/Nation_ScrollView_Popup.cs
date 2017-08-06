@@ -27,6 +27,7 @@ public class Nation_ScrollView_Popup : MonoBehaviour {
 			{
 				GameObject element = GameObject.Instantiate (objElement);
 				element.transform.parent = rtContent.transform;
+				element.transform.localScale = Vector3.one;
 				element.name = it.Current.Key.ToString ();
 				SetElement (element, it.Current.Value);
 			}
