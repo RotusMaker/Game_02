@@ -1,19 +1,21 @@
 
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\AIChatData.xlsx
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx
 ------------------------------------------------------------------------------
-[AIChatData.xlsx(Sheet1): ROW 1]
-Found object mark: '#ai_chat_data[{}]'
-[AIChatData.xlsx(Sheet1): ROW 1]
- Key: code at 1
-[AIChatData.xlsx(Sheet1): ROW 1]
- Key: nation_code at 2
-[AIChatData.xlsx(Sheet1): ROW 1]
- Key: emotion_level at 3
-[AIChatData.xlsx(Sheet1): ROW 1]
- Key: text at 4
+[commentary_data.xlsx(Sheet1): ROW 1]
+Found object mark: '#commentary_data[{}]'
+[commentary_data.xlsx(Sheet1): ROW 1]
+ Key: id at 1
+[commentary_data.xlsx(Sheet1): ROW 1]
+ Key: action at 2
+[commentary_data.xlsx(Sheet1): ROW 1]
+ Key: order at 3
+[commentary_data.xlsx(Sheet1): ROW 1]
+ Key: name at 4
+[commentary_data.xlsx(Sheet1): ROW 1]
+ Key: text at 5
 Parsing Array Object Table...
 
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx
@@ -52,21 +54,38 @@ Found object mark: '#game_data[{}]'
  Key: event_code at 6
 Parsing Array Object Table...
 
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\NationInfo.xlsx
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\NationInfo.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\NationInfo.xlsx
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx
 ------------------------------------------------------------------------------
-[NationInfo.xlsx(Sheet1): ROW 1]
+[nation_data.xlsx(Sheet1): ROW 1]
 Found object mark: '#nation_data[{}]'
-[NationInfo.xlsx(Sheet1): ROW 1]
- Key: code at 1
-[NationInfo.xlsx(Sheet1): ROW 1]
+[nation_data.xlsx(Sheet1): ROW 1]
+ Key: id at 1
+[nation_data.xlsx(Sheet1): ROW 1]
  Key: name at 2
-[NationInfo.xlsx(Sheet1): ROW 1]
+[nation_data.xlsx(Sheet1): ROW 1]
  Key: sprite at 3
-[NationInfo.xlsx(Sheet1): ROW 1]
+[nation_data.xlsx(Sheet1): ROW 1]
  Key: best_sports_event at 4
+Parsing Array Object Table...
+
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx
+Parse sheet: Sheet1
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx
+------------------------------------------------------------------------------
+[referee_data.xlsx(Sheet1): ROW 1]
+Found object mark: '#referee_data[{}]'
+[referee_data.xlsx(Sheet1): ROW 1]
+ Key: id at 1
+[referee_data.xlsx(Sheet1): ROW 1]
+ Key: name at 2
+[referee_data.xlsx(Sheet1): ROW 1]
+ Key: nation at 3
+[referee_data.xlsx(Sheet1): ROW 1]
+ Key: desc at 4
 Parsing Array Object Table...
 
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx
@@ -216,3 +235,20 @@ Found object mark: '#friends{}'
  Key: $value[] at 2
 Parsing Simple Table...
 Using key index: 1 value index: 2
+
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx
+Parse sheet: Sheet1
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx.$$$\Sheet1.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx
+------------------------------------------------------------------------------
+[user_chat_data.xlsx(Sheet1): ROW 2]
+Found object mark: '#user_chat_data[{}]'
+[user_chat_data.xlsx(Sheet1): ROW 2]
+ Key: id at 1
+[user_chat_data.xlsx(Sheet1): ROW 2]
+ Key: nation_id at 2
+[user_chat_data.xlsx(Sheet1): ROW 2]
+ Key: emotion_level at 3
+[user_chat_data.xlsx(Sheet1): ROW 2]
+ Key: talk at 4
+Parsing Array Object Table...
