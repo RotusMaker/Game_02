@@ -10,31 +10,31 @@
 			"id": 102,
 			"name": "박준범",
 			"nation": "한국",
-			"desc": 0
+			"desc": "채워넣어"
 		},
 		{
 			"id": 103,
 			"name": "박제영",
 			"nation": "미국",
-			"desc": 0
+			"desc": "채워넣어"
 		},
 		{
 			"id": 104,
 			"name": "박창현",
 			"nation": "한국",
-			"desc": 0
+			"desc": "채워넣어"
 		},
 		{
 			"id": 105,
 			"name": "정대훈",
 			"nation": "중국",
-			"desc": 0
+			"desc": "채워넣어"
 		},
 		{
 			"id": 106,
 			"name": "조현우",
 			"nation": "일본",
-			"desc": 0
+			"desc": "채워넣어"
 		}
 	]
 }
