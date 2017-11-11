@@ -2,10 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 게임종목
+public enum eGameType
+{
+	eNone = 0,
+	eGame1,
+	eGame2,
+	eGame3,
+	eGame4,
+}
+
+// 나라
+public enum eNation
+{
+	eNone = 0,
+	eKorea,
+	eJapan,
+	eChina,
+}
+
+// 게임시작 시 게임타입 정보.
+public class GameStartInfo
+{
+	public eGameType m_eGameType;	// 종목
+	public List<eNation> m_listJoinNation;	// 참여국
+}
+
 // 가공가능한 데이터는 'Info' 접미사 사용
 // 저장, 불러오기가 가능해야함
 public class PlayerPrefs_GameInfo : Singleton<PlayerPrefs_GameInfo>
 {
+	public GameStartInfo m_gameStartInfo = new GameStartInfo ();	// 게임시작정보.
+	
 	private int m_nGameLevel = 0;
 	private Dictionary<int/*국가코드*/, int/*순위*/> m_dicMissionRanking = new Dictionary<int, int>();
 
