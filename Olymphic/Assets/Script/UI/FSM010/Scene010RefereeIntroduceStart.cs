@@ -31,12 +31,6 @@ namespace PPoory
 				Debug.Log(string.Format("{0}.{1}.{2}", name, GetType().Name, MethodBase.GetCurrentMethod().Name));
 			}
 
-			// 데이터 셋팅. 내꺼랑 상대방꺼.
-			RefereeData data1 = RefereeJSON.Instance.GetReferee(101);
-			RefereeData data2 = RefereeJSON.Instance.GetReferee(102);
-			myName.text = data1.name;
-			otherName.text = data2.name;
-
 			// 액션 시작.
 			StartCoroutine(StartAction());
 

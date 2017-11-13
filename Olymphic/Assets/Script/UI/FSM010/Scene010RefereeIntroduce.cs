@@ -11,8 +11,5 @@ public class Scene010RefereeIntroduce : MonoBehaviour {
 	void Awake () {
 		if (m_uFsm == null)
 			m_uFsm = this.GetComponent<uFSM>();
-
-		// Data load
-		RefereeJSON.Instance.LoadJSON ();
 	}
 }

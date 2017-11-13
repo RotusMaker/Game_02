@@ -2,25 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// 게임종목
-public enum eGameType
-{
-	eNone = 0,
-	eGame1,
-	eGame2,
-	eGame3,
-	eGame4,
-}
-
-// 나라
-public enum eNation
-{
-	eNone = 0,
-	eKorea,
-	eJapan,
-	eChina,
-}
-
 // 게임시작 시 게임타입 정보.
 public class GameStartInfo
 {
@@ -53,7 +34,7 @@ public class PlayerPrefs_GameInfo : Singleton<PlayerPrefs_GameInfo>
 			PlayerPrefs.SetInt ("GameLevel", m_nGameLevel);
 		}
 	}
-
+	/*
 	// 게임 미션 생성
 	public void CreateMission(int likeNation, int hateNation)
 	{
@@ -116,4 +97,5 @@ public class PlayerPrefs_GameInfo : Singleton<PlayerPrefs_GameInfo>
 	{
 		return m_dicMissionRanking.ContainsKey(code);
 	}
+	*/
 }
