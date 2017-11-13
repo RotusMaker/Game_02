@@ -55,31 +55,13 @@ Found object mark: '#game_data[{}]'
 Parsing Array Object Table...
 
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx
-Parse sheet: 나라
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\나라.csv
 Parse sheet: 종목
 Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\종목.csv
-Parse sheet: 해설
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\해설.csv
-Parse sheet: 상황
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\상황.csv
+Parse sheet: 나라
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\나라.csv
 Parse sheet: 유물
 Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\유물.csv
 Closing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx
-------------------------------------------------------------------------------
-[main_data.xlsx(나라): ROW 1]
-Found object mark: '#nation[{}]'
-[main_data.xlsx(나라): ROW 1]
- Key: id at 1
-[main_data.xlsx(나라): ROW 1]
- Key: name at 2
-[main_data.xlsx(나라): ROW 1]
- Key: very_good_thing at 3
-[main_data.xlsx(나라): ROW 1]
- Key: good_thing at 4
-[main_data.xlsx(나라): ROW 1]
- Key: wrong_thing at 5
-Parsing Array Object Table...
 ------------------------------------------------------------------------------
 [main_data.xlsx(종목): ROW 1]
 Found object mark: '#gametype[{}]'
@@ -93,22 +75,18 @@ Found object mark: '#gametype[{}]'
  Key: win_type at 4
 Parsing Array Object Table...
 ------------------------------------------------------------------------------
-[main_data.xlsx(해설): ROW 1]
-Found object mark: '#commentary[{}]'
-[main_data.xlsx(해설): ROW 1]
+[main_data.xlsx(나라): ROW 1]
+Found object mark: '#nation[{}]'
+[main_data.xlsx(나라): ROW 1]
  Key: id at 1
-[main_data.xlsx(해설): ROW 1]
- Key: content at 2
-Parsing Array Object Table...
-------------------------------------------------------------------------------
-[main_data.xlsx(상황): ROW 1]
-Found object mark: '#action[{}]'
-[main_data.xlsx(상황): ROW 1]
- Key: id at 1
-[main_data.xlsx(상황): ROW 1]
- Key: game_type at 2
-[main_data.xlsx(상황): ROW 1]
- Key: content at 3
+[main_data.xlsx(나라): ROW 1]
+ Key: name at 2
+[main_data.xlsx(나라): ROW 1]
+ Key: very_good_thing at 3
+[main_data.xlsx(나라): ROW 1]
+ Key: good_thing at 4
+[main_data.xlsx(나라): ROW 1]
+ Key: wrong_thing at 5
 Parsing Array Object Table...
 ------------------------------------------------------------------------------
 [main_data.xlsx(유물): ROW 1]

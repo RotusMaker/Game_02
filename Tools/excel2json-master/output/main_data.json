@@ -1,4 +1,96 @@
 {
+	"gametype": [
+		{
+			"id": 1,
+			"name": "알파인스키",
+			"player_cnt": 1,
+			"win_type": "RANK"
+		},
+		{
+			"id": 2,
+			"name": "바이애슬론",
+			"player_cnt": 1,
+			"win_type": "RANK"
+		},
+		{
+			"id": 3,
+			"name": "봅슬레이",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 4,
+			"name": "크로스컨트리스키",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 5,
+			"name": "컬링",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 6,
+			"name": "피겨스케이팅",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 7,
+			"name": "프리스타일스키",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 8,
+			"name": "아이스하키",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 9,
+			"name": "루지",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 10,
+			"name": "노르딕복합",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 11,
+			"name": "쇼트트랙",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 12,
+			"name": "스피드스케이팅",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 13,
+			"name": "스켈레톤",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 14,
+			"name": "스키점프",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		},
+		{
+			"id": 15,
+			"name": "스노우보드",
+			"player_cnt": 1,
+			"win_type": "POINT"
+		}
+	],
 	"nation": [
 		{
 			"id": 1,
@@ -104,111 +196,6 @@
 			"very_good_thing": "1,2,18",
 			"good_thing": "5,8,21",
 			"wrong_thing": "3,24"
-		}
-	],
-	"gametype": [
-		{
-			"id": 1,
-			"name": "알파인스키",
-			"player_cnt": 1,
-			"win_type": "RANK"
-		},
-		{
-			"id": 2,
-			"name": "바이애슬론",
-			"player_cnt": 1,
-			"win_type": "RANK"
-		},
-		{
-			"id": 3,
-			"name": "봅슬레이",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 4,
-			"name": "크로스컨트리스키",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 5,
-			"name": "컬링",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 6,
-			"name": "피겨스케이팅",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 7,
-			"name": "프리스타일스키",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 8,
-			"name": "아이스하키",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 9,
-			"name": "루지",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 10,
-			"name": "노르딕복합",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 11,
-			"name": "쇼트트랙",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 12,
-			"name": "스피드스케이팅",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 13,
-			"name": "스켈레톤",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 14,
-			"name": "스키점프",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		},
-		{
-			"id": 15,
-			"name": "스노우보드",
-			"player_cnt": 1,
-			"win_type": "POINT"
-		}
-	],
-	"commentary": [
-		{
-			"id": 1,
-			"content": "안녕하세요."
-		}
-	],
-	"action": [
-		{
-			"id": 1,
-			"game_type": 1,
-			"content": "현재 1등인 국가 선수 표정이 이상하군요! "
 		}
 	],
 	"item": [
