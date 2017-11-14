@@ -1,0 +1,274 @@
+{
+	"event": [
+		{
+			"id": 1,
+			"game_type": 1,
+			"change_rank": 1,
+			"content": "현재 1등인 국가 선수 표정이 이상하군요! \\n무슨일이죠?!"
+		},
+		{
+			"id": 2,
+			"game_type": 1,
+			"change_rank": "1,2",
+			"content": "현재 1등 선수와 2등선수가 서로 맞붙었습니다!\\n굉장하군요!!"
+		},
+		{
+			"id": 3,
+			"game_type": 1,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 4,
+			"game_type": 2,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 5,
+			"game_type": 2,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 6,
+			"game_type": 2,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 7,
+			"game_type": 3,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 8,
+			"game_type": 3,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 9,
+			"game_type": 3,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 10,
+			"game_type": 4,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 11,
+			"game_type": 4,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 12,
+			"game_type": 4,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 13,
+			"game_type": 5,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 14,
+			"game_type": 5,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 15,
+			"game_type": 5,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 16,
+			"game_type": 6,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 17,
+			"game_type": 6,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 18,
+			"game_type": 6,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 19,
+			"game_type": 7,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 20,
+			"game_type": 7,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 21,
+			"game_type": 7,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 22,
+			"game_type": 8,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 23,
+			"game_type": 8,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 24,
+			"game_type": 8,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 25,
+			"game_type": 9,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 26,
+			"game_type": 9,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 27,
+			"game_type": 9,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 28,
+			"game_type": 10,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 29,
+			"game_type": 10,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 30,
+			"game_type": 10,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 31,
+			"game_type": 11,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 32,
+			"game_type": 11,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 33,
+			"game_type": 11,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 34,
+			"game_type": 12,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 35,
+			"game_type": 12,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 36,
+			"game_type": 12,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 37,
+			"game_type": 13,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 38,
+			"game_type": 13,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 39,
+			"game_type": 13,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 40,
+			"game_type": 14,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 41,
+			"game_type": 14,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 42,
+			"game_type": 14,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 43,
+			"game_type": 15,
+			"change_rank": 1,
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 44,
+			"game_type": 15,
+			"change_rank": "1,2",
+			"content": "추돌 사고가 일어났습니다!"
+		},
+		{
+			"id": 45,
+			"game_type": 15,
+			"change_rank": 0,
+			"content": "추돌 사고가 일어났습니다!"
+		}
+	]
+}

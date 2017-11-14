@@ -58,9 +58,9 @@ public class NationData
 {
 	public int id;
 	public string name;
-	public List<eGameType> very_good_thing;
-	public List<eGameType> good_thing;
-	public List<eGameType> wrong_thing;
+	public List<int> very_good_thing;
+	public List<int> good_thing;
+	public List<int> wrong_thing;
 }
 // 게임종목 데이터.
 public class GameTypeData
@@ -70,25 +70,45 @@ public class GameTypeData
 	public int player_cnt;
 	public eWinType win_type;
 }
+// 해설 데이터.
+public class CommentaryData
+{
+	public int id;
+	public string commentary;
+}
+// 이벤트 데이터.
+public class EventData
+{
+	public int id;
+	public int game_type;
+	public List<int> change_rank;	// 이건 기획적으로 더 정하고.
+	public string content;
+}
 
 // 싱글톤 선언하기
 public class GameDataJSON : Singleton<GameDataJSON> 
 {
 	public Dictionary<int, NationData> m_dicNationData = null;
 	public Dictionary<int, GameTypeData> m_dicGameTypeData = null;
+	public Dictionary<int, CommentaryData> m_dicCommentaryData = null;
+	public Dictionary<int, EventData> m_dicEventData = null;
 
 	protected GameDataJSON () {}	// Singletone use.
 
+	public bool IsLoaded()
+	{
+		return (m_dicNationData != null && m_dicEventData != null);
+	}
+
 	public void LoadJSON()
 	{
-		if (m_dicNationData == null) 
+		if (IsLoaded() == false)
 		{
 			string aJSON = FileLoader.Instance.LoadTextAssetToResources ("main_data");
 			JSONNode root = JSON.Parse (aJSON);
 
-			m_dicNationData = new Dictionary<int, NationData> ();
-
 			// 나라데이터 파싱.
+			m_dicNationData = new Dictionary<int, NationData> ();
 			JSONNode nationNode = root ["nation"];
 			Debug.Log (nationNode.Count.ToString ());
 			for (int i = 0; i < nationNode.Count; i++) {
@@ -103,10 +123,9 @@ public class GameDataJSON : Singleton<GameDataJSON>
 				Debug.Log (string.Format ("@{0},{1},{2}", nationData.id, nationData.name, nationData.very_good_thing.Count));
 				m_dicNationData.Add (nationData.id, nationData);
 			}
-
-			m_dicGameTypeData = new Dictionary<int, GameTypeData> ();
-
+				
 			// 종목데이터 파싱.
+			m_dicGameTypeData = new Dictionary<int, GameTypeData> ();
 			JSONNode gameTypeNode = root ["gametype"];
 			Debug.Log (gameTypeNode.Count.ToString ());
 			for (int i = 0; i < gameTypeNode.Count; i++) 
@@ -121,17 +140,57 @@ public class GameDataJSON : Singleton<GameDataJSON>
 				Debug.Log (string.Format("@{0},{1},{2}",gameTypeData.id,gameTypeData.name,gameTypeData.win_type.ToString()));
 				m_dicGameTypeData.Add (gameTypeData.id,gameTypeData);
 			}
+
+			// 유물데이터 파싱.
+
+			// 해설데이터 파싱.
+			m_dicCommentaryData = new Dictionary<int, CommentaryData>();
+			JSONNode commNode = root ["commentary"];
+			Debug.Log (commNode.Count.ToString ());
+			for (int i = 0; i < commNode.Count; i++) 
+			{
+				JSONNode childNode = commNode [i];
+				CommentaryData commData = new CommentaryData ();
+				commData.id = childNode ["id"].AsInt;
+				commData.commentary = childNode ["content"];
+
+				Debug.Log (string.Format("@{0},{1}",commData.id,commData.commentary));
+				m_dicCommentaryData.Add (commData.id,commData);
+			}
+		}
+
+		if (IsLoaded () == false) 
+		{
+			string aJSON = FileLoader.Instance.LoadTextAssetToResources ("event_data");
+			JSONNode root = JSON.Parse (aJSON);
+
+			// 나라데이터 파싱.
+			m_dicEventData = new Dictionary<int, EventData> ();
+			JSONNode eventNode = root ["event"];
+			Debug.Log (eventNode.Count.ToString ());
+			for (int i = 0; i < eventNode.Count; i++) {
+				JSONNode childNode = eventNode [i];
+				EventData eventData = new EventData ();
+				eventData.id = childNode ["id"].AsInt;
+				eventData.game_type = childNode ["game_type"].AsInt;
+				eventData.change_rank = GetListGameType (childNode ["change_rank"]);
+				eventData.content = childNode ["content"];
+
+				Debug.Log (string.Format ("@{0},{1},{2}", eventData.id, eventData.game_type, eventData.content));
+				m_dicEventData.Add (eventData.id, eventData);
+			}
 		}
 	}
 
-	public List<eGameType> GetListGameType(string data)
+	public List<int> GetListGameType(string data)
 	{
-		List<eGameType> listResult = new List<eGameType> ();
+		List<int> listResult = new List<int> ();
 		string[] split = data.Split (',');
 		if (split != null)
 		{
 			for (int i = 0; i < split.Length; i++) {
-				listResult.Add((eGameType)System.Convert.ToInt32(split[i]));
+				//listResult.Add((eGameType)System.Convert.ToInt32(split[i]));
+				listResult.Add(System.Convert.ToInt32(split[i]));
 			}
 		}
 		return listResult;
