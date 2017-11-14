@@ -1,0 +1,10 @@
+{
+	"event": [
+		{
+			"id": 1,
+			"game_type": 1,
+			"change_rank": 1,
+			"content": "현재 1등인 국가 선수 표정이 이상하군요! "
+		}
+	]
+}

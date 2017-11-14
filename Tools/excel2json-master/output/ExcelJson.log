@@ -1,57 +1,19 @@
 
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\commentary_data.xlsx
+Loading: C:\Olymphic\trunk\Tools\excel2json-master\event_data.xlsx
+Parse sheet: 상황
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\event_data.xlsx.$$$\상황.csv
+Closing: C:\Olymphic\trunk\Tools\excel2json-master\event_data.xlsx
 ------------------------------------------------------------------------------
-[commentary_data.xlsx(Sheet1): ROW 1]
-Found object mark: '#commentary_data[{}]'
-[commentary_data.xlsx(Sheet1): ROW 1]
+[event_data.xlsx(상황): ROW 1]
+Found object mark: '#event[{}]'
+[event_data.xlsx(상황): ROW 1]
  Key: id at 1
-[commentary_data.xlsx(Sheet1): ROW 1]
- Key: action at 2
-[commentary_data.xlsx(Sheet1): ROW 1]
- Key: order at 3
-[commentary_data.xlsx(Sheet1): ROW 1]
- Key: name at 4
-[commentary_data.xlsx(Sheet1): ROW 1]
- Key: text at 5
-Parsing Array Object Table...
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\EventInfo.xlsx
-------------------------------------------------------------------------------
-[EventInfo.xlsx(Sheet1): ROW 1]
-Found object mark: '#event_data[{}]'
-[EventInfo.xlsx(Sheet1): ROW 1]
- Key: code at 1
-[EventInfo.xlsx(Sheet1): ROW 1]
- Key: name at 2
-[EventInfo.xlsx(Sheet1): ROW 1]
- Key: sprite at 3
-Parsing Array Object Table...
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\GameInfo.xlsx
-------------------------------------------------------------------------------
-[GameInfo.xlsx(Sheet1): ROW 1]
-Found object mark: '#game_data[{}]'
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: code at 1
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: name at 2
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: sprite at 3
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: open_date at 4
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: open_time at 5
-[GameInfo.xlsx(Sheet1): ROW 1]
- Key: event_code at 6
+[event_data.xlsx(상황): ROW 1]
+ Key: game_type at 2
+[event_data.xlsx(상황): ROW 1]
+ Key: change_rank at 3
+[event_data.xlsx(상황): ROW 1]
+ Key: content at 4
 Parsing Array Object Table...
 
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx
@@ -61,6 +23,8 @@ Parse sheet: 나라
 Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\나라.csv
 Parse sheet: 유물
 Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\유물.csv
+Parse sheet: 해설
+Parsing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx.$$$\해설.csv
 Closing: C:\Olymphic\trunk\Tools\excel2json-master\main_data.xlsx
 ------------------------------------------------------------------------------
 [main_data.xlsx(종목): ROW 1]
@@ -104,114 +68,14 @@ Found object mark: '#item[{}]'
 [main_data.xlsx(유물): ROW 1]
  Key: decs at 6
 Parsing Array Object Table...
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\nation_data.xlsx
 ------------------------------------------------------------------------------
-[nation_data.xlsx(Sheet1): ROW 1]
-Found object mark: '#nation_data[{}]'
-[nation_data.xlsx(Sheet1): ROW 1]
+[main_data.xlsx(해설): ROW 1]
+Found object mark: '#commentary[{}]'
+[main_data.xlsx(해설): ROW 1]
  Key: id at 1
-[nation_data.xlsx(Sheet1): ROW 1]
- Key: name at 2
-[nation_data.xlsx(Sheet1): ROW 1]
- Key: sprite at 3
-[nation_data.xlsx(Sheet1): ROW 1]
- Key: best_sports_event at 4
+[main_data.xlsx(해설): ROW 1]
+ Key: content at 2
 Parsing Array Object Table...
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\referee_data.xlsx
-------------------------------------------------------------------------------
-[referee_data.xlsx(Sheet1): ROW 1]
-Found object mark: '#referee_data[{}]'
-[referee_data.xlsx(Sheet1): ROW 1]
- Key: id at 1
-[referee_data.xlsx(Sheet1): ROW 1]
- Key: name at 2
-[referee_data.xlsx(Sheet1): ROW 1]
- Key: nation at 3
-[referee_data.xlsx(Sheet1): ROW 1]
- Key: desc at 4
-Parsing Array Object Table...
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx.$$$\Sheet1.csv
-Parse sheet: Sheet2
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx.$$$\Sheet2.csv
-Parse sheet: Sheet3
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx.$$$\Sheet3.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\sample.xlsx
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 3]
-Found object mark: '#init{}'
-[sample.xlsx(Sheet1): ROW 3]
- Key: $key at 1
-[sample.xlsx(Sheet1): ROW 3]
- Key: $value at 2
-Parsing Simple Table...
-Using key index: 1 value index: 2
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 12]
-Found object mark: '#buildings{{}}'
-[sample.xlsx(Sheet1): ROW 12]
- Key: $key at 1
-[sample.xlsx(Sheet1): ROW 12]
- Key: color at 2
-[sample.xlsx(Sheet1): ROW 12]
- Key: width at 3
-[sample.xlsx(Sheet1): ROW 12]
- Key: height at 4
-Parsing Object Object Table...
-Using key index: 1
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 20]
-Found object mark: '#reqcoins{[]}'
-[sample.xlsx(Sheet1): ROW 20]
- Key: barrack at 1
-[sample.xlsx(Sheet1): ROW 20]
- Key: mine at 2
-[sample.xlsx(Sheet1): ROW 20]
- Key: gas at 3
-Parsing Object Array Table...
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 30]
-Found object mark: '#shop[{}]'
-[sample.xlsx(Sheet1): ROW 30]
- Key: name at 1
-[sample.xlsx(Sheet1): ROW 30]
- Key: price at 2
-[sample.xlsx(Sheet1): ROW 30]
- Key: req_level at 3
-[sample.xlsx(Sheet1): ROW 30]
- Key: category at 4
-[sample.xlsx(Sheet1): ROW 30]
- Key: desc at 5
-Parsing Array Object Table...
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 38]
-Found object mark: '#inventory[{}]'
-[sample.xlsx(Sheet1): ROW 38]
- Key: type at 1
-[sample.xlsx(Sheet1): ROW 38]
- Key: attrib[] at 2
-[sample.xlsx(Sheet1): ROW 38]
- Key: dur at 5
-Parsing Array Object Table...
-------------------------------------------------------------------------------
-[sample.xlsx(Sheet1): ROW 44]
-Found object mark: '#friends{}'
-[sample.xlsx(Sheet1): ROW 44]
- Key: $key at 1
-[sample.xlsx(Sheet1): ROW 44]
- Key: $value[] at 2
-Parsing Simple Table...
-Using key index: 1 value index: 2
 
 Loading: C:\Olymphic\trunk\Tools\excel2json-master\sample_ko.xlsx
 Parse sheet: Sheet1
@@ -286,20 +150,3 @@ Found object mark: '#friends{}'
  Key: $value[] at 2
 Parsing Simple Table...
 Using key index: 1 value index: 2
-
-Loading: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx
-Parse sheet: Sheet1
-Parsing: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx.$$$\Sheet1.csv
-Closing: C:\Olymphic\trunk\Tools\excel2json-master\user_chat_data.xlsx
-------------------------------------------------------------------------------
-[user_chat_data.xlsx(Sheet1): ROW 2]
-Found object mark: '#user_chat_data[{}]'
-[user_chat_data.xlsx(Sheet1): ROW 2]
- Key: id at 1
-[user_chat_data.xlsx(Sheet1): ROW 2]
- Key: nation_id at 2
-[user_chat_data.xlsx(Sheet1): ROW 2]
- Key: emotion_level at 3
-[user_chat_data.xlsx(Sheet1): ROW 2]
- Key: talk at 4
-Parsing Array Object Table...
