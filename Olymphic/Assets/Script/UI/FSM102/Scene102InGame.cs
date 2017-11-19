@@ -26,7 +26,8 @@ public class Scene102InGame : MonoBehaviour
 	private uFSM m_uFsm = null;
 
 	[Header("UI")]
-	public Text m_textBoard;
+	public RectTransform m_rtCommantary;
+	public Text m_textCommantary;
 
 	[HideInInspector]
 	public int m_nSetCount = 0;	// 세트진행 횟수.
@@ -39,6 +40,8 @@ public class Scene102InGame : MonoBehaviour
 	{
 		if (m_uFsm == null)
 			m_uFsm = this.GetComponent<uFSM>();
+
+		m_textCommantary.text = string.Empty;
 	}
 
 	void Start()
@@ -53,7 +56,30 @@ public class Scene102InGame : MonoBehaviour
 		
 		yield return null;
 
+		AddCommantary ("commantarycommantary");
+		AddCommantary ("commantary");
+		AddCommantary ("commantarycommantary");
+		AddCommantary ("commantary");
+		AddCommantary ("commantary");
+
 		// 해설 발생.
-		m_uFsm.Event ("Astate");
+		//m_uFsm.Event ("Astate");
+	}
+
+	public void AddCommantary(string commantary)
+	{
+		string text = m_textCommantary.text;
+		if (string.IsNullOrEmpty (text)) {
+			text = commantary;
+		} 
+		else {
+			text = string.Format ("{0}\n{1}", text, commantary);
+		}
+
+		//Debug.Log(LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform) + " vs " + m_textCommantary.rectTransform.rect.height);
+		m_textCommantary.text = text;
+		//Debug.Log(LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform) + " vs " + m_textCommantary.rectTransform.rect.height);
+
+		m_rtCommantary.sizeDelta = new Vector2 (m_rtCommantary.sizeDelta.x, LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform));
 	}
 }
