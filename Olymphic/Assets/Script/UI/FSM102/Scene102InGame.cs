@@ -41,6 +41,8 @@ public class Scene102InGame : MonoBehaviour
 		if (m_uFsm == null)
 			m_uFsm = this.GetComponent<uFSM>();
 
+		GameDataJSON.Instance.LoadJSON ();
+
 		m_textCommantary.text = string.Empty;
 	}
 
@@ -56,14 +58,8 @@ public class Scene102InGame : MonoBehaviour
 		
 		yield return null;
 
-		AddCommantary ("commantarycommantary");
-		AddCommantary ("commantary");
-		AddCommantary ("commantarycommantary");
-		AddCommantary ("commantary");
-		AddCommantary ("commantary");
-
 		// 해설 발생.
-		//m_uFsm.Event ("Astate");
+		m_uFsm.Event ("A_state");
 	}
 
 	public void AddCommantary(string commantary)
@@ -71,7 +67,7 @@ public class Scene102InGame : MonoBehaviour
 		string text = m_textCommantary.text;
 		if (string.IsNullOrEmpty (text)) {
 			text = commantary;
-		} 
+		}
 		else {
 			text = string.Format ("{0}\n{1}", text, commantary);
 		}

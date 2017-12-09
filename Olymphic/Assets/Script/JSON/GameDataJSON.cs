@@ -164,7 +164,7 @@ public class GameDataJSON : Singleton<GameDataJSON>
 			string aJSON = FileLoader.Instance.LoadTextAssetToResources ("event_data");
 			JSONNode root = JSON.Parse (aJSON);
 
-			// 나라데이터 파싱.
+			// 이벤트 데이터.
 			m_dicEventData = new Dictionary<int, EventData> ();
 			JSONNode eventNode = root ["event"];
 			Debug.Log (eventNode.Count.ToString ());
@@ -180,6 +180,17 @@ public class GameDataJSON : Singleton<GameDataJSON>
 				m_dicEventData.Add (eventData.id, eventData);
 			}
 		}
+	}
+
+
+
+	// 해설데이터 가져오기.
+	public CommentaryData GetComment(int id)
+	{
+		if (m_dicCommentaryData.ContainsKey (id)) {
+			return m_dicCommentaryData [id];
+		}
+		return null;
 	}
 
 	public List<int> GetListGameType(string data)

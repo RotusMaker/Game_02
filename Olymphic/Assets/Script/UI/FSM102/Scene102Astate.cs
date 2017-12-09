@@ -12,6 +12,8 @@ namespace PPoory
 	[DisallowMultipleComponent]
 	public class Scene102Astate : BaseState {
 
+		private Scene102InGame gameScene;
+
 		// Essential
 		public override string GetStateName()
 		{
@@ -28,6 +30,8 @@ namespace PPoory
 			}
 
 			base.OnEnter();
+
+			gameScene = this.GetComponent<Scene102InGame> ();
 
 			StartCoroutine (OnAstate ());
 		}
@@ -47,8 +51,13 @@ namespace PPoory
 		IEnumerator OnAstate()
 		{
 			// 멘트를 순서대로 진행.
-			yield return null;
-			fsm.Event ("Bstate");
+			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(1).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
+			yield return new WaitForSeconds (0.3f);
+			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(2).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
+			yield return new WaitForSeconds (0.3f);
+			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(3).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
+			yield return new WaitForSeconds (0.3f);
+			fsm.Event ("B_state");
 		}
 	}
 }
