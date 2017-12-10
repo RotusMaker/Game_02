@@ -93,6 +93,8 @@ public class GameDataJSON : Singleton<GameDataJSON>
 	public Dictionary<int, CommentaryData> m_dicCommentaryData = null;
 	public Dictionary<int, EventData> m_dicEventData = null;
 
+	public float fLoadPercent = 0;
+
 	protected GameDataJSON () {}	// Singletone use.
 
 	public bool IsLoaded()
@@ -100,8 +102,21 @@ public class GameDataJSON : Singleton<GameDataJSON>
 		return (m_dicNationData != null && m_dicEventData != null);
 	}
 
+	// 테스트용.
 	public void LoadJSON()
 	{
+		MainFrame.instance.StartCoroutine (OnLoadingJSON ());
+	}
+
+	public IEnumerator OnLoadingJSON()
+	{
+		fLoadPercent = 0;
+
+		if (IsLoaded () == true) {
+			fLoadPercent = 100f;
+			yield break;
+		}
+
 		if (IsLoaded() == false)
 		{
 			string aJSON = FileLoader.Instance.LoadTextAssetToResources ("main_data");
@@ -122,8 +137,13 @@ public class GameDataJSON : Singleton<GameDataJSON>
 
 				Debug.Log (string.Format ("@{0},{1},{2}", nationData.id, nationData.name, nationData.very_good_thing.Count));
 				m_dicNationData.Add (nationData.id, nationData);
+				if (i % 100 == 0) {
+					yield return null;
+					fLoadPercent = 10f;
+				}
 			}
-				
+			fLoadPercent = 15f;
+
 			// 종목데이터 파싱.
 			m_dicGameTypeData = new Dictionary<int, GameTypeData> ();
 			JSONNode gameTypeNode = root ["gametype"];
@@ -139,7 +159,12 @@ public class GameDataJSON : Singleton<GameDataJSON>
 
 				Debug.Log (string.Format("@{0},{1},{2}",gameTypeData.id,gameTypeData.name,gameTypeData.win_type.ToString()));
 				m_dicGameTypeData.Add (gameTypeData.id,gameTypeData);
+				if (i % 100 == 0) {
+					yield return null;
+					fLoadPercent = 25f;
+				}
 			}
+			fLoadPercent = 30f;
 
 			// 유물데이터 파싱.
 
@@ -156,7 +181,12 @@ public class GameDataJSON : Singleton<GameDataJSON>
 
 				Debug.Log (string.Format("@{0},{1}",commData.id,commData.commentary));
 				m_dicCommentaryData.Add (commData.id,commData);
+				if (i % 100 == 0) {
+					yield return null;
+					fLoadPercent = 40f;
+				}
 			}
+			fLoadPercent = 50f;
 		}
 
 		if (IsLoaded () == false) 
@@ -178,8 +208,15 @@ public class GameDataJSON : Singleton<GameDataJSON>
 
 				Debug.Log (string.Format ("@{0},{1},{2}", eventData.id, eventData.game_type, eventData.content));
 				m_dicEventData.Add (eventData.id, eventData);
+				if (i % 100 == 0) {
+					yield return null;
+					fLoadPercent = 80f;
+				}
 			}
+			fLoadPercent = 100f;
 		}
+
+		fLoadPercent = 100f;
 	}
 
 

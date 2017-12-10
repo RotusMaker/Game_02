@@ -62,20 +62,24 @@ public class Scene102InGame : MonoBehaviour
 		m_uFsm.Event ("A_state");
 	}
 
-	public void AddCommantary(string commantary)
+	public string[] GetSplitCommant(string commant)
+	{
+		return commant.Split ('\n');
+	}
+
+	// 라인 한줄씩 기입하기.
+	public void AddCommantaryLine(string line)
 	{
 		string text = m_textCommantary.text;
 		if (string.IsNullOrEmpty (text)) {
-			text = commantary;
+			text = line;
 		}
 		else {
-			text = string.Format ("{0}\n{1}", text, commantary);
+			text = string.Format ("{0}\n{1}", text, line);
 		}
-
 		//Debug.Log(LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform) + " vs " + m_textCommantary.rectTransform.rect.height);
 		m_textCommantary.text = text;
 		//Debug.Log(LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform) + " vs " + m_textCommantary.rectTransform.rect.height);
-
 		m_rtCommantary.sizeDelta = new Vector2 (m_rtCommantary.sizeDelta.x, LayoutUtility.GetPreferredHeight(m_textCommantary.rectTransform));
 	}
 }

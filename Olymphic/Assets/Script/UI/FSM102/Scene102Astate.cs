@@ -51,12 +51,13 @@ namespace PPoory
 		IEnumerator OnAstate()
 		{
 			// 멘트를 순서대로 진행.
-			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(1).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
-			yield return new WaitForSeconds (0.3f);
-			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(2).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
-			yield return new WaitForSeconds (0.3f);
-			gameScene.AddCommantary(string.Format(GameDataJSON.Instance.GetComment(3).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
-			yield return new WaitForSeconds (0.3f);
+			for (int j = 0; j < 10; j++) {
+				string[] split = gameScene.GetSplitCommant (string.Format (GameDataJSON.Instance.GetComment (1).commentary, gameScene.m_nGameType, gameScene.m_nGameType));
+				for (int i = 0; i < split.Length; i++) {
+					gameScene.AddCommantaryLine (split [i]);
+					yield return new WaitForSeconds (1f);	
+				}
+			}
 			fsm.Event ("B_state");
 		}
 	}

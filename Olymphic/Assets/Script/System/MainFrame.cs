@@ -42,6 +42,8 @@ public class MainFrame : MonoSingleton<MainFrame> {
         switch(number)
         {
             case 0:     sceneName = "Scene000Common"; break;
+			case 1:     sceneName = "Scene001Load"; break;
+			case 2:     sceneName = "Scene002NickName"; break;
             case 10:    sceneName = "Scene010RefereeIntroduce"; break;
             case 11:    sceneName = "Scene011GameRanking"; break;
             case 12:    sceneName = "Scene012Commentary"; break;

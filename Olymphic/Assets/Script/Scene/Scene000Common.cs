@@ -6,8 +6,7 @@ public class Scene000Common : MonoBehaviour {
 
     private void Start()
     {
-		GameDataJSON.Instance.LoadJSON ();
-		
-        MainFrame.instance.NextScene(10, 2f);
+		// 데이터 로드는 타이틀에서 하자.
+		MainFrame.instance.NextScene(1, 2f);
     }
 }
